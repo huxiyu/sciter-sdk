@@ -92,14 +92,14 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\include;glw</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>..\..\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>glu32.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SOIL.lib;glu32.lib;opengl32.lib;glew32s.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Manifest>
       <EnableDPIAwareness>false</EnableDPIAwareness>
@@ -204,6 +204,8 @@
     <ClInclude Include="..\..\include\tiscript.hpp" />
     <ClInclude Include="..\..\include\value.h" />
     <ClInclude Include="..\..\include\value.hpp" />
+    <ClInclude Include="glw\ARB_Multisample.h" />
+    <ClInclude Include="glw\NeHeGL.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="sciter.h" />
     <ClInclude Include="stdafx.h" />
@@ -215,6 +217,8 @@
     <ClCompile Include="..\..\include\behaviors\behavior_drawing.cpp" />
     <ClCompile Include="..\..\include\behaviors\behavior_tabs.cpp" />
     <ClCompile Include="..\..\include\behaviors\behavior_video_generator.cpp" />
+    <ClCompile Include="glw\ARB_Multisample.cpp" />
+    <ClCompile Include="glw\NeHeGL.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="sciter.cpp" />
     <ClCompile Include="stdafx.cpp">
